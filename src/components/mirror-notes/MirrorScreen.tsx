@@ -10,7 +10,7 @@ interface MirrorScreenProps {
   onContinue: () => void;
 }
 
-const NOTE_COLORS = ["note-yellow", "note-mint", "note-blue"] as const;
+const NOTE_COLORS = ["note-red", "note-orange", "note-yellow", "note-green", "note-blue", "note-purple"] as const;
 
 // Predefined positions (percentage-based) for notes on the mirror
 const NOTE_POSITIONS = [

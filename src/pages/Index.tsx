@@ -47,7 +47,7 @@ const Index = () => {
     <div className="min-h-screen bg-background max-w-md mx-auto">
       <AnimatePresence mode="wait">
         {screen === "intro" && (
-          <IntroScreen key="intro" onStart={() => setScreen("mirror")} />
+          <IntroScreen key="intro" onStart={() => setScreen("mirror")} onBack={handleBack} />
         )}
         {screen === "mirror" && (
           <MirrorScreen

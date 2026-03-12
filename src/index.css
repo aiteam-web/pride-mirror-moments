@@ -87,15 +87,27 @@
     box-shadow: var(--mirror-shadow);
   }
 
+  .note-red {
+    background-color: hsl(var(--note-red));
+  }
+
+  .note-orange {
+    background-color: hsl(var(--note-orange));
+  }
+
   .note-yellow {
     background-color: hsl(var(--note-yellow));
   }
 
-  .note-mint {
-    background-color: hsl(var(--note-mint));
+  .note-green {
+    background-color: hsl(var(--note-green));
   }
 
   .note-blue {
     background-color: hsl(var(--note-blue));
+  }
+
+  .note-purple {
+    background-color: hsl(var(--note-purple));
   }
 }

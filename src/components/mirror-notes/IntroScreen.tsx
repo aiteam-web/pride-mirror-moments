@@ -47,8 +47,8 @@ const IntroScreen = ({ onStart, onBack }: IntroScreenProps) => {
         <div className="absolute inset-0 rounded-[2rem] bg-mirror border-2 border-border" />
         {/* Empty sticky notes */}
         {[
-          { color: "note-yellow", rotate: -6, top: "10%", left: "-15%" },
-          { color: "note-mint", rotate: 4, top: "35%", right: "-18%" },
+          { color: "note-red", rotate: -6, top: "10%", left: "-15%" },
+          { color: "note-yellow", rotate: 4, top: "35%", right: "-18%" },
           { color: "note-blue", rotate: -3, bottom: "8%", left: "-10%" },
         ].map((note, i) => (
           <motion.div
