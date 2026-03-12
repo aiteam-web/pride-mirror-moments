@@ -44,6 +44,15 @@
     --note-purple: 270 60% 90%;
 
     --gradient-primary: linear-gradient(135deg, #8B7CF6, #B8A1FF);
+    --pride-gradient: linear-gradient(
+      180deg,
+      hsla(0, 70%, 92%, 0.4),
+      hsla(30, 75%, 90%, 0.4),
+      hsla(50, 80%, 90%, 0.4),
+      hsla(140, 50%, 90%, 0.4),
+      hsla(215, 60%, 92%, 0.4),
+      hsla(270, 50%, 92%, 0.4)
+    );
     --mirror-bg: linear-gradient(180deg, hsla(270, 30%, 95%, 0.8), hsla(200, 30%, 95%, 0.6));
     --mirror-shadow: 0 8px 32px hsla(270, 40%, 60%, 0.15);
 
