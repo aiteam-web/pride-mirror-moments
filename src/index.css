@@ -36,9 +36,12 @@
 
     --radius: 1rem;
 
-    --note-yellow: 50 100% 82%;
-    --note-mint: 150 70% 88%;
-    --note-blue: 215 100% 92%;
+    --note-red: 0 80% 90%;
+    --note-orange: 30 85% 88%;
+    --note-yellow: 50 90% 86%;
+    --note-green: 140 60% 87%;
+    --note-blue: 215 80% 90%;
+    --note-purple: 270 60% 90%;
 
     --gradient-primary: linear-gradient(135deg, #8B7CF6, #B8A1FF);
     --mirror-bg: linear-gradient(180deg, hsla(270, 30%, 95%, 0.8), hsla(200, 30%, 95%, 0.6));
