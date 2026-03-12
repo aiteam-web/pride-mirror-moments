@@ -1,18 +1,28 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 interface IntroScreenProps {
   onStart: () => void;
+  onBack?: () => void;
 }
 
-const IntroScreen = ({ onStart }: IntroScreenProps) => {
+const IntroScreen = ({ onStart, onBack }: IntroScreenProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center"
+      className="relative flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center"
     >
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="absolute top-4 left-4 p-2 rounded-full text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+        >
+          <ArrowLeft className="w-5 h-5" />
+        </button>
+      )}
       <motion.h1
         initial={{ scale: 0.9 }}
         animate={{ scale: 1 }}
@@ -37,8 +47,8 @@ const IntroScreen = ({ onStart }: IntroScreenProps) => {
         <div className="absolute inset-0 rounded-[2rem] bg-mirror border-2 border-border" />
         {/* Empty sticky notes */}
         {[
-          { color: "note-yellow", rotate: -6, top: "10%", left: "-15%" },
-          { color: "note-mint", rotate: 4, top: "35%", right: "-18%" },
+          { color: "note-red", rotate: -6, top: "10%", left: "-15%" },
+          { color: "note-yellow", rotate: 4, top: "35%", right: "-18%" },
           { color: "note-blue", rotate: -3, bottom: "8%", left: "-10%" },
         ].map((note, i) => (
           <motion.div
