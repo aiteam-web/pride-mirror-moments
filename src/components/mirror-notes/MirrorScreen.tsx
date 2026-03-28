@@ -47,7 +47,27 @@ const MirrorScreen = ({ notes, onAddNote, onContinue }: MirrorScreenProps) => {
       exit={{ opacity: 0 }}
       className="flex flex-col items-center min-h-screen px-5 py-6"
     >
-      <p className="text-sm text-muted-foreground text-center font-body mb-1">{prompt}</p>
+      {/* Instruction bar */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="w-full max-w-xs mx-auto mb-4 rounded-xl bg-accent/60 backdrop-blur-sm border border-border/50 px-4 py-3"
+      >
+        <p className="text-sm font-medium text-accent-foreground text-center mb-1">
+          {filledCount === 0
+            ? "📝 Tap \"Add Note\" to write something you appreciate about yourself"
+            : filledCount < 3
+              ? `✨ Great start! Add ${3 - filledCount} more note${3 - filledCount > 1 ? "s" : ""} to continue`
+              : "🎉 Beautiful! You can keep adding or continue to reflection"}
+        </p>
+        <p className="text-xs text-muted-foreground text-center">
+          {filledCount === 0
+            ? "Place sticky notes on your mirror as daily affirmations"
+            : filledCount < 3
+              ? "Your mirror is starting to fill with appreciation"
+              : "Tap \"Continue to Reflection\" when you're ready"}
+        </p>
+      </motion.div>
 
       {filledCount === 0 && (
         <div className="flex flex-wrap gap-2 justify-center mb-3 mt-1">
